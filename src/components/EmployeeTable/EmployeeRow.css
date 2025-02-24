@@ -1,0 +1,27 @@
+.table__row {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.2s ease;
+}
+
+.table__row:hover {
+  background-color: var(--color-background);
+}
+
+.table__td {
+  color: var(--color-text-secondary);
+  padding: 16px 24px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  .table__td:nth-child(n+3):nth-child(-n+5) {
+    display: none;
+  }
+}

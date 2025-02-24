@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Employee } from './types';
 import EmployeeRow from './EmployeeRow';
+import './EmployeeTable.css';
 
 function EmployeeTable() {
   const [employees, setEmployees] = useState<Employee[]>([]);
@@ -42,31 +43,37 @@ function EmployeeTable() {
   }
 
   return (
-    <div className="employee-table-container">
-      <h2>Funcionários</h2>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Pesquisar"
-        className="search-input"
-      />
-      <table className="employee-table">
-        <thead>
-          <tr className="table-header">
-            <th>FOTO</th>
-            <th>NOME</th>
-            <th>CARGO</th>
-            <th>DATA DE ADMISSÃO</th>
-            <th>TELEFONE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredEmployees.map((employee) => (
-            <EmployeeRow key={employee.id} employee={employee} />
-          ))}
-        </tbody>
-      </table>
+    <div>
+      <section className="container__subheader">
+        <h2 className="container__title">Funcionários</h2>
+        <div className='search'>
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Pesquisar"
+            className="search__input"
+          />
+        </div>
+      </section>
+      <section className="table-container">
+        <table className="table">
+          <thead>
+            <tr className="table__header">
+              <th className="table__th">FOTO</th>
+              <th className="table__th">NOME</th>
+              <th className="table__th">CARGO</th>
+              <th className="table__th">DATA DE ADMISSÃO</th>
+              <th className="table__th">TELEFONE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredEmployees.map((employee) => (
+              <EmployeeRow key={employee.id} employee={employee} />
+            ))}
+          </tbody>
+        </table>
+      </section>
     </div>
   );
 };

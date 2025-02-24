@@ -1,3 +1,5 @@
+import './Header.css';
+
 type HeaderProps = {
   logo: string;
   alt: string;
@@ -5,10 +7,11 @@ type HeaderProps = {
 
 const Header = ({ logo, alt }: HeaderProps) => {
   return (
-    <header>
+    <header className='header'>
       <img
         src={ logo }
         alt={ alt }
+        className='header__logo'
       />
     </header>
   )

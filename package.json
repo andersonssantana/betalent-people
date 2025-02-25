@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --open",
     "build": "tsc -b && vite build",
-    "lint": "eslint -c .eslintrc.json . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint .",
     "preview": "vite preview",
     "server": "json-server --watch db.json"
   },

@@ -33,11 +33,17 @@ function EmployeeRow ({ employee }: { employee: Employee }) {
       </tr>
       {isExpanded && (
         <tr className="expanded-row">
-          <td colSpan={5}>
+          <td colSpan={2}>
             <div className="expanded-content">
-              <div><strong>Cargo:</strong> {employee.job}</div>
-              <div><strong>Data de admissão:</strong> {formatDate(employee.admission_date)}</div>
-              <div><strong>Telefone:</strong> {formatPhone(employee.phone)}</div>
+              <div>
+                <strong>Cargo:</strong> {employee.job}
+              </div>
+              <div>
+                <strong>Data de admissão:</strong> {formatDate(employee.admission_date)}
+              </div>
+              <div>
+                <strong>Telefone:</strong> {formatPhone(employee.phone)}
+              </div>
             </div>
           </td>
         </tr>

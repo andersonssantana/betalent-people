@@ -1,5 +1,5 @@
 import { formatDate, formatPhone } from "../../utils/formatters";
-import { Employee } from "./types";
+import { Employee } from "../../types";
 import './EmployeeRow.css';
 
 function EmployeeRow ({ employee }: { employee: Employee }) {

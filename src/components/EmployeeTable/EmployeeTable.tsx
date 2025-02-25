@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { GoDotFill } from 'react-icons/go';
 import { Employee } from '../../types';
 import EmployeeRow from '../EmployeeRow/';
-import { FaSearch } from "react-icons/fa";
-import { GoDotFill } from "react-icons/go";
 import './EmployeeTable.css';
 
 function EmployeeTable() {
@@ -48,7 +48,7 @@ function EmployeeTable() {
     <div>
       <section className="container__subheader">
         <h2 className="container__title">Funcionários</h2>
-        <div className='search'>
+        <div className="search">
           <input
             type="text"
             value={searchTerm}

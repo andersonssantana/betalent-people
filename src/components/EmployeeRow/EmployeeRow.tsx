@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { formatDate, formatPhone } from "../../utils/formatters";
-import { Employee } from "../../types";
 import { FaChevronDown } from 'react-icons/fa';
+import { Employee } from '../../types';
+import { formatDate, formatPhone } from '../../utils/formatters';
 import './EmployeeRow.css';
 
 function EmployeeRow ({ employee }: { employee: Employee }) {

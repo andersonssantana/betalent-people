@@ -1,6 +1,6 @@
 import logo from './assets/logo.svg';
 import EmployeeTable from './components/EmployeeTable';
-import Header from './components/Header'
+import Header from './components/Header';
 import './App.css';
 
 function App() {

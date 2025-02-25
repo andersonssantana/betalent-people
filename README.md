@@ -74,6 +74,7 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Des
 
 A aplicação foi desenvolvida com foco em responsividade:
 
+- **Mobile-First**: Toda a estilização CSS foi implementada seguindo a abordagem mobile-first, priorizando a experiência em dispositivos móveis e expandindo progressivamente para telas maiores
 - **Desktop**: Exibe todas as colunas da tabela de funcionários
 - **Mobile**: Exibe uma versão compacta com opção de expandir para ver mais detalhes
 

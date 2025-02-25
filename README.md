@@ -1,50 +1,110 @@
-# React + TypeScript + Vite
+# BeTalent - Teste Técnico Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Sobre o Projeto
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Front-end na BeTalent. A aplicação consiste em uma interface para visualização e pesquisa de informações de funcionários, construída com React, TypeScript e Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+- **Listagem de Funcionários**: Visualização de todos os funcionários da empresa em uma tabela responsiva
+- **Pesquisa**: Busca por nome, cargo ou telefone dos funcionários
+- **Layout Responsivo**: Interface adaptável para dispositivos móveis e desktop
+- **Detalhes Expansíveis**: Em dispositivos móveis, os detalhes dos funcionários podem ser expandidos com um clique
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React 19**: Biblioteca para construção de interfaces
+- **TypeScript**: Superset tipado de JavaScript
+- **Vite**: Build tool e dev server
+- **JSON Server**: Simulação de API REST para desenvolvimento
+- **React Icons**: Biblioteca de ícones para React
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🖼️ Screenshots
+
+<table>
+  <tr>
+    <td><img src="./public/desktop.png" alt="Versão Desktop" /></td>
+    <td><img src="./public/mobile.png" alt="Versão Mobile" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Versão Desktop</strong></td>
+    <td align="center"><strong>Versão Mobile</strong></td>
+  </tr>
+</table>
+
+## 📦 Instalação e Uso
+
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+
+### Configuração
+
+1. Clone o repositório:
+   ```bash
+   git clone git@github.com:andersonssantana/betalent-people.git
+   cd betalent-people
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
+
+3. Inicie o JSON Server (API mock):
+   ```bash
+   npm run server
+   # ou
+   yarn server
+   ```
+
+4. Em outra janela de terminal, inicie a aplicação:
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. Acesse a aplicação em [http://localhost:5173](http://localhost:5173)
+
+## 📱 Responsividade
+
+A aplicação foi desenvolvida com foco em responsividade:
+
+- **Desktop**: Exibe todas as colunas da tabela de funcionários
+- **Mobile**: Exibe uma versão compacta com opção de expandir para ver mais detalhes
+
+## 🧪 Estrutura do Projeto
+
+```
+src/
+├── assets/        # Arquivos estáticos (imagens, ícones)
+├── components/    # Componentes React reutilizáveis
+│   ├── EmployeeRow/     # Componente de linha de funcionário
+│   ├── EmployeeTable/   # Tabela de funcionários
+│   └── Header/          # Cabeçalho da aplicação
+├── utils/         # Funções utilitárias
+├── types.ts       # Definições de tipos TypeScript
+└── App.tsx        # Componente principal
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔍 Funcionalidades Adicionais
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Formatação de Dados**: Funções para formatar telefones e datas
+- **Tratamento de Erros**: Feedback visual durante carregamento e em caso de erros
+- **Animações**: Transições suaves ao expandir/colapsar informações
+- **Pesquisa em Tempo Real**: Filtragem dinâmica dos resultados conforme o usuário digita
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 👨‍💻 Autor
+
+Desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Front-end na BeTalent.
+
+### Contato
+
+- **Nome:** Anderson Santana
+- **E-mail:** [anderssantana@outlook.com](mailto:anderssantana@outlook.com)
+- **GitHub:** [github.com/andersonssantana](https://github.com/andersonssantana/)
+- **LinkedIn:** [linkedin.com/in/andersonssantana](https://www.linkedin.com/in/andersonssantana/)

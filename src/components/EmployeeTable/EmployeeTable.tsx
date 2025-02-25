@@ -3,6 +3,7 @@ import { FaSearch } from 'react-icons/fa';
 import { GoDotFill } from 'react-icons/go';
 import { Employee } from '../../types';
 import EmployeeRow from '../EmployeeRow/';
+import Loading from '../Loading';
 import './EmployeeTable.css';
 
 function EmployeeTable() {
@@ -37,7 +38,7 @@ function EmployeeTable() {
   );
 
   if (isLoading) {
-    return <div>Carregando...</div>;
+    return <Loading />;
   }
 
   if (error) {

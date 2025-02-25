@@ -86,7 +86,8 @@ src/
 ├── components/    # Componentes React reutilizáveis
 │   ├── EmployeeRow/     # Componente de linha de funcionário
 │   ├── EmployeeTable/   # Tabela de funcionários
-│   └── Header/          # Cabeçalho da aplicação
+│   ├── Header/          # Cabeçalho da aplicação
+│   └── Loading/         # Componente de carregamento
 ├── utils/         # Funções utilitárias
 ├── types.ts       # Definições de tipos TypeScript
 └── App.tsx        # Componente principal

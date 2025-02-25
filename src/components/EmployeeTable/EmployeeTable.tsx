@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Employee } from './types';
 import EmployeeRow from './EmployeeRow';
+import { FaSearch } from "react-icons/fa";
 import './EmployeeTable.css';
 
 function EmployeeTable() {
@@ -54,6 +55,7 @@ function EmployeeTable() {
             placeholder="Pesquisar"
             className="search__input"
           />
+          <FaSearch className="search__icon" />
         </div>
       </section>
       <section className="table-container">

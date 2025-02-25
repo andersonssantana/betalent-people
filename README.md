@@ -39,12 +39,14 @@ O design da aplicação foi baseado no layout fornecido pela BeTalent, disponív
 ### Configuração
 
 1. Clone o repositório:
+
    ```bash
    git clone git@github.com:andersonssantana/betalent-people.git
    cd betalent-people
-   ```
+   ```bash
 
 2. Instale as dependências:
+
    ```bash
    npm install
    # ou
@@ -52,6 +54,7 @@ O design da aplicação foi baseado no layout fornecido pela BeTalent, disponív
    ```
 
 3. Inicie o JSON Server (API mock):
+
    ```bash
    npm run server
    # ou
@@ -59,6 +62,7 @@ O design da aplicação foi baseado no layout fornecido pela BeTalent, disponív
    ```
 
 4. Em outra janela de terminal, inicie a aplicação:
+
    ```bash
    npm run dev
    # ou
@@ -77,7 +81,7 @@ A aplicação foi desenvolvida com foco em responsividade:
 
 ## 🧪 Estrutura do Projeto
 
-```
+```bash
 src/
 ├── assets/        # Arquivos estáticos (imagens, ícones)
 ├── components/    # Componentes React reutilizáveis

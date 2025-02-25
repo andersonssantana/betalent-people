@@ -24,8 +24,23 @@
   width: 40px;
 }
 
+.name-with-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevron-icon {
+  color: var(--color-primary);
+  height: 16px;
+  width: 16px
+}
+
 @media (min-width: 769px) {
   .table__td:nth-child(n+3):nth-child(-n+5) {
     display: table-cell;
+  }
+  .chevron-icon {
+    display: none;
   }
 }

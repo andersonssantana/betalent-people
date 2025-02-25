@@ -68,6 +68,10 @@
   display: none;
 }
 
+.table__th:nth-child(1) {
+  border-top-left-radius: 8px;
+}
+
 .table__th:nth-child(2) {
   border-top-right-radius: 8px;
 }

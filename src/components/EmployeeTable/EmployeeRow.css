@@ -13,6 +13,10 @@
   padding: 16px 24px;
 }
 
+.table__td:nth-child(n+3):nth-child(-n+5) {
+  display: none;
+}
+
 .profile-image {
   border-radius: 50%;
   height: 40px;
@@ -20,8 +24,8 @@
   width: 40px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .table__td:nth-child(n+3):nth-child(-n+5) {
-    display: none;
+    display: table-cell;
   }
 }

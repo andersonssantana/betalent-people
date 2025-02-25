@@ -33,6 +33,7 @@
 .chevron-icon {
   color: var(--color-primary);
   height: 16px;
+  transition: transform 0.2s ease;
   width: 16px
 }
 
@@ -46,6 +47,10 @@
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text-secondary);
   padding: 16px 24px;
+}
+
+.expanded-content.closing {
+  animation: slideUp 0.3s ease-out;
 }
 
 .expanded-content div {
@@ -67,9 +72,19 @@
   }
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 .chevron-icon.rotated {
   transform: rotate(180deg);
-  transition: transform 0.2s ease;
 }
 
 @media (min-width: 769px) {

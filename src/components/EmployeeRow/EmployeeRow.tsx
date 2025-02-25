@@ -15,7 +15,7 @@ function EmployeeRow ({ employee }: { employee: Employee }) {
     <>
       <tr 
         key={employee.id} 
-        className={`table__row ${isExpanded && 'expanded'}`}
+        className={`table__row${isExpanded ? ' expanded' : ''}`}
         onClick={toggleExpand}
       >
         <td className="table__td">

@@ -52,8 +52,8 @@ function EmployeeTable() {
         <div className="search">
           <input
             type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            value={ searchTerm }
+            onChange={ (e) => setSearchTerm(e.target.value) }
             placeholder="Pesquisar"
             className="search__input"
           />
@@ -77,9 +77,9 @@ function EmployeeTable() {
             </tr>
           </thead>
           <tbody>
-            {filteredEmployees.map((employee) => (
-              <EmployeeRow key={employee.id} employee={employee} />
-            ))}
+            { filteredEmployees.map((employee) => (
+              <EmployeeRow key={ employee.id } employee={ employee } />
+            )) }
           </tbody>
         </table>
       </section>

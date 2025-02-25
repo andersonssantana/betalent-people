@@ -13,6 +13,7 @@
   padding: 16px 24px;
 }
 
+/* Oculta colunas 3 a 5 em telas menores */
 .table__td:nth-child(n+3):nth-child(-n+5) {
   display: none;
 }
@@ -34,7 +35,7 @@
   color: var(--color-primary);
   height: 16px;
   transition: transform 0.2s ease;
-  width: 16px
+  width: 16px;
 }
 
 .expanded-row td {
@@ -87,6 +88,7 @@
   transform: rotate(180deg);
 }
 
+/* Ajustes para telas maiores */
 @media (min-width: 769px) {
   .table__td:nth-child(n+3):nth-child(-n+5) {
     display: table-cell;
@@ -103,5 +105,4 @@
   .expanded-row {
     display: none;
   }
-
 }

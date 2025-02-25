@@ -10,14 +10,17 @@
   --font-family: 'Roboto', sans-serif;
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  background-color: var(--color-background);
+body {
   font-family: var(--font-family);
-  margin: 0;
+}
+
+.app-container {
+  background-color: var(--color-background);
   min-height: 100vh;
 }

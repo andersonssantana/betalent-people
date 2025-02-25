@@ -64,6 +64,7 @@
   font-weight: 400;
 }
 
+/* Oculta colunas 3 a 5 em telas menores */
 .table__th:nth-child(n+3):nth-child(-n+5) {
   display: none;
 }
@@ -81,6 +82,7 @@
   justify-content: space-between;
 }
 
+/* Ajustes para telas maiores */
 @media (min-width: 769px) {
   .container__subheader {
     align-items: center;

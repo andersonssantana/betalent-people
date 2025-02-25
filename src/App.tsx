@@ -5,11 +5,11 @@ import './App.css';
 
 function App() {
   return (
-    <main className='container'>
-      <Header logo={ logo } alt='BeTalent'/>
+    <main className='app-container'>
+      <Header logo={ logo } alt='BeTalent' />
       <EmployeeTable />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

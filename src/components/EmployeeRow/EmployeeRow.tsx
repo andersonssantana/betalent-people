@@ -5,7 +5,7 @@ import { FaChevronDown } from 'react-icons/fa';
 import './EmployeeRow.css';
 
 function EmployeeRow ({ employee }: { employee: Employee }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);

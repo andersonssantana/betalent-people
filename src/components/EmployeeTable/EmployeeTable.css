@@ -76,6 +76,11 @@
   border-top-right-radius: 8px;
 }
 
+.table__th--name {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: 769px) {
   .container__subheader {
     align-items: center;
@@ -102,7 +107,11 @@
   }
 
   .table__th:nth-child(2) {
-    border-top-right-radius: 0;
+    border-top-right-radius: 0px;
+  }
+
+  .table__th:nth-child(2) svg {
+    display: none;
   }
 
   .table__th:first-child {

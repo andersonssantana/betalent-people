@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Employee } from '../../types';
 import EmployeeRow from '../EmployeeRow/';
 import { FaSearch } from "react-icons/fa";
+import { GoDotFill } from "react-icons/go";
 import './EmployeeTable.css';
 
 function EmployeeTable() {
@@ -63,7 +64,12 @@ function EmployeeTable() {
           <thead>
             <tr className="table__header">
               <th className="table__th">FOTO</th>
-              <th className="table__th">NOME</th>
+              <th className="table__th">
+                <div className="table__th--name">
+                  <span>NOME</span>
+                  <GoDotFill />
+                </div>
+              </th>
               <th className="table__th">CARGO</th>
               <th className="table__th">DATA DE ADMISSÃO</th>
               <th className="table__th">TELEFONE</th>

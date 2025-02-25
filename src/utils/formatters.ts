@@ -8,8 +8,8 @@ export const formatDate = (isoDate: string): string => {
 
 export const formatPhone = (phone: string): string => {
   const cc = phone.slice(0, 2);
-  const aa = phone.slice(2, 4);
-  const num1 = phone.slice(4, 9);
-  const num2 = phone.slice(9, 13);
-  return `+${cc} (${aa}) ${num1}-${num2}`;
+  const ac = phone.slice(2, 4);
+  const prefix = phone.slice(4, 9);
+  const number = phone.slice(9, 13);
+  return `+${cc} (${ac}) ${prefix}-${number}`;
 };

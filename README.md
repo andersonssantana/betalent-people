@@ -43,7 +43,7 @@ O design da aplicação foi baseado no layout fornecido pela BeTalent, disponív
    ```bash
    git clone git@github.com:andersonssantana/betalent-people.git
    cd betalent-people
-   ```bash
+   ```
 
 2. Instale as dependências:
 

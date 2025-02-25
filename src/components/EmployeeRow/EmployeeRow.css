@@ -98,6 +98,10 @@
     background-color: var(--color-background);
   }
 
+  .table__row.expanded {
+    border-bottom: 1px solid var(--color-border);
+  }
+
   .chevron-icon {
     display: none;
   }
@@ -105,4 +109,5 @@
   .expanded-row {
     display: none;
   }
+
 }

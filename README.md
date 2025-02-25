@@ -2,7 +2,7 @@
 
 ## 📋 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Front-end na BeTalent. A aplicação consiste em uma interface para visualização e pesquisa de informações de funcionários, construída com React, TypeScript e Vite.
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Front-end na [BeTalent](https://betalent.tech). A aplicação consiste em uma interface para visualização e pesquisa de informações de funcionários, construída com React, TypeScript e Vite.
 
 ## 🚀 Funcionalidades
 
@@ -19,18 +19,15 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Des
 - **JSON Server**: Simulação de API REST para desenvolvimento
 - **React Icons**: Biblioteca de ícones para React
 
+## 🎨 Design
+
+O design da aplicação foi baseado no layout fornecido pela BeTalent, disponível no [Figma](https://www.figma.com/design/yw6th52zE9bubewc6ayTg5/Teste-T%C3%A9cnico-Frontend-BeTalent)
+
 ## 🖼️ Screenshots
 
-<table>
-  <tr>
-    <td><img src="./public/desktop.png" alt="Versão Desktop" /></td>
-    <td><img src="./public/mobile.png" alt="Versão Mobile" /></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Versão Desktop</strong></td>
-    <td align="center"><strong>Versão Mobile</strong></td>
-  </tr>
-</table>
+| ![Versão Desktop](./public/desktop.png) | ![Versão Mobile](./public/mobile.png) |
+|:---------------------------------------:|:-------------------------------------:|
+| **Versão Desktop**                      | **Versão Mobile**                     |
 
 ## 📦 Instalação e Uso
 

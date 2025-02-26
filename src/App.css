@@ -8,6 +8,14 @@
   --color-muted: #9e9e9e;
   --loading-bg-color: rgba(255, 255, 255, 0.8);
   --font-family: 'Roboto', sans-serif;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --shadow-default: 0px 2px 8px 0px #00000033;
+  --transition-default: 0.2s ease;
 }
 
 * {
@@ -18,9 +26,10 @@
 
 body {
   font-family: var(--font-family);
+  line-height: 1.5;
 }
 
-.app-container {
+.app {
   background-color: var(--color-background);
   min-height: 100vh;
 }

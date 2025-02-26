@@ -1,127 +1,161 @@
-.container__subheader {
+/* Componente principal */
+.employee-table {
+  width: 100%;
+}
+
+/* Cabeçalho com título e busca */
+.employee-table__header {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 32px;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
 }
 
-.container__title {
+.employee-table__title {
   color: var(--color-text);
   font-size: 20px;
+  font-weight: 600;
+  margin: 0;
 }
 
-.search {
+/* Campo de busca */
+.employee-table__search {
   position: relative;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
-.search__icon {
+.employee-table__search-icon {
+  color: var(--color-muted);
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-muted);
   pointer-events: none;
 }
 
-.search__input {
+.employee-table__search-input {
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--border-radius-md);
   font-size: 14px;
   height: 40px;
-  padding: 8px 40px 8px 16px;
   outline: none;
-  width: -webkit-fill-available;
+  padding: 8px 40px 8px 16px;
+  width: 100%;
 }
 
-.search__input::placeholder {
+.employee-table__search-input::placeholder {
   color: var(--color-muted);
 }
 
-.table-container {
+/* Container da tabela */
+.employee-table__container {
   background-color: var(--color-background);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-md);
   overflow-x: auto;
   padding: 0 32px 32px;
 }
 
-.table {
+/* Tabela principal */
+.employee-table__table {
   border-collapse: collapse;
   min-width: 300px;
   width: 100%;
 }
 
-.table__header {
+/* Cabeçalho da tabela */
+.employee-table__head-row {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-.table__th {
+.employee-table__head-cell {
+  font-weight: 400;
   padding: 16px 24px;
   text-align: left;
-  font-weight: 400;
 }
 
-/* Oculta colunas 3 a 5 em telas menores */
-.table__th:nth-child(n+3):nth-child(-n+5) {
+/* Oculta colunas em telas menores */
+.employee-table__head-cell:nth-child(n+3):nth-child(-n+5) {
   display: none;
 }
 
-.table__th:nth-child(1) {
-  border-top-left-radius: 8px;
+/* Bordas arredondadas */
+.employee-table__head-cell:first-child {
+  border-top-left-radius: var(--border-radius-md);
 }
 
-.table__th:nth-child(2) {
-  border-top-right-radius: 8px;
+.employee-table__head-cell:nth-child(2) {
+  border-top-right-radius: var(--border-radius-md);
 }
 
-.table__th--name {
+/* Header de nome com ícone */
+.employee-table__name-header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-/* Ajustes para telas maiores */
+.employee-table__name-icon {
+  display: block;
+}
+
+/* Estado de erro */
+.employee-table__error {
+  background-color: #fff;
+  border-radius: var(--border-radius-md);
+  color: #ff0000;
+  margin: var(--spacing-lg);
+  padding: var(--spacing-sm);
+  text-align: center;
+}
+
+/* Estado vazio */
+.employee-table__empty-row {
+  background-color: var(--color-white);
+}
+
+.employee-table__empty-cell {
+  color: var(--color-muted);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Responsividade */
 @media (min-width: 769px) {
-  .container__subheader {
+  .employee-table__header {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
   }
 
-  .search {
+  .employee-table__search {
     width: auto;
   }
 
-  .search__input {
+  .employee-table__search-input {
     min-width: 265px;
     width: auto;
   }
 
-  .table-container {
+  .employee-table__container {
     overflow: hidden;
   }
 
-  .table__th:nth-child(n+3):nth-child(-n+5) {
+  .employee-table__head-cell:nth-child(n+3):nth-child(-n+5) {
     display: table-cell;
   }
 
-  .table__th:nth-child(2) {
-    border-top-right-radius: 0px;
+  .employee-table__head-cell:nth-child(2) {
+    border-top-right-radius: 0;
   }
 
-  .table__th:nth-child(2) svg {
+  .employee-table__name-icon {
     display: none;
   }
 
-  .table__th:first-child {
-    border-top-left-radius: 8px;
-    width: 100px;
-  }
-
-  .table__th:last-child {
-    border-top-right-radius: 8px;
+  .employee-table__head-cell:last-child {
+    border-top-right-radius: var(--border-radius-md);
   }
 }

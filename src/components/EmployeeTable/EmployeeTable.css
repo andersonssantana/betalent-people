@@ -1,25 +1,3 @@
-/* Componente principal */
-.employee-table {
-  width: 100%;
-}
-
-/* Cabeçalho com título e busca */
-.employee-table__header {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-lg);
-}
-
-.employee-table__title {
-  color: var(--color-text);
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* Container da tabela */
 .employee-table__container {
   background-color: var(--color-background);
   border-radius: var(--border-radius-md);
@@ -27,14 +5,12 @@
   padding: 0 32px 32px;
 }
 
-/* Tabela principal */
 .employee-table__table {
   border-collapse: collapse;
   min-width: 300px;
   width: 100%;
 }
 
-/* Cabeçalho da tabela */
 .employee-table__head-row {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -46,12 +22,10 @@
   text-align: left;
 }
 
-/* Oculta colunas em telas menores */
 .employee-table__head-cell:nth-child(n+3):nth-child(-n+5) {
   display: none;
 }
 
-/* Bordas arredondadas */
 .employee-table__head-cell:first-child {
   border-top-left-radius: var(--border-radius-md);
 }
@@ -60,7 +34,6 @@
   border-top-right-radius: var(--border-radius-md);
 }
 
-/* Header de nome com ícone */
 .employee-table__name-header {
   align-items: center;
   display: flex;
@@ -71,7 +44,6 @@
   display: block;
 }
 
-/* Estado vazio */
 .employee-table__empty-row {
   background-color: var(--color-white);
 }
@@ -82,15 +54,7 @@
   text-align: center;
 }
 
-/* Responsividade */
 @media (min-width: 769px) {
-  .employee-table__header {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0;
-  }
-
   .employee-table__container {
     overflow: hidden;
   }

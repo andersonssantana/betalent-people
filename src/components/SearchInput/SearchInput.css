@@ -1,0 +1,42 @@
+/* Componente principal */
+.search-input__container {
+  position: relative;
+  width: 100%;
+}
+
+.search-input__input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  padding: 8px 40px 8px 16px;
+  width: 100%;
+}
+
+/* Placeholder */
+.search-input__input::placeholder {
+  color: var(--color-muted);
+}
+
+/* Ícone */
+.search-input__icon {
+  color: var(--color-muted);
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Responsividade */
+@media (min-width: 769px) {
+  .search-input__container {
+    width: auto;
+  }
+
+  .search-input__input {
+    min-width: 265px;
+    width: auto;
+  }
+}

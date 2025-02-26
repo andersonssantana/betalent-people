@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { FaSearch } from 'react-icons/fa';
 import { GoDotFill } from 'react-icons/go';
 import { Employee } from '../../types';
 import EmployeeRow from '../EmployeeRow/';
 import Loading from '../Loading';
+import SearchInput from '../SearchInput';
 import { fetchEmployees } from '../../services/api';
 import './EmployeeTable.css';
 
@@ -70,17 +70,11 @@ function EmployeeTable() {
     <div className="employee-table">
       <section className="employee-table__header">
         <h2 className="employee-table__title">Funcionários</h2>
-        <div className="employee-table__search">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            placeholder="Pesquisar"
-            className="employee-table__search-input"
-            aria-label="Pesquisar funcionários"
-          />
-          <FaSearch className="employee-table__search-icon" />
-        </div>
+        <SearchInput
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Pesquisar"
+        />
       </section>
       <section className="employee-table__container">
         <table className="employee-table__table">

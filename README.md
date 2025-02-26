@@ -56,9 +56,10 @@ A aplicação foi construída com foco em componentização, seguindo princípio
 src/
 ├── components/        # Componentes React reutilizáveis
 │   ├── EmployeeRow/   # Componente para cada linha da tabela
-│   ├── EmployeeTable/ # Tabela com cabeçalho e funcionalidade de busca
+│   ├── EmployeeTable/ # Tabela com funcionalidade de busca
 │   ├── Header/        # Cabeçalho da aplicação
-│   └── Loading/       # Componente de carregamento
+│   ├── Loading/       # Componente de carregamento
+│   └── SearchInput/   # Campo de busca em tempo real
 ├── services/          # Serviços para comunicação com a API
 ├── utils/             # Funções utilitárias 
 ├── types.ts           # Definições de tipos TypeScript

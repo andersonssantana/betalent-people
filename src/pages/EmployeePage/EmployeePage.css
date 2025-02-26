@@ -1,7 +1,9 @@
+/* Componente principal */
 .employee-page {
   width: 100%;
 }
 
+/* Cabeçalho com título e busca */
 .employee-page__header {
   align-items: flex-start;
   display: flex;
@@ -17,6 +19,7 @@
   margin: 0;
 }
 
+/* Responsividade */
 @media (min-width: 769px) {
   .employee-page__header {
     align-items: center;

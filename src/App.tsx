@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import Header from './components/Header';
 import logo from './assets/logo.svg';
-import './App.css';
 import EmployeePage from './pages/EmployeePage';
+import Header from './components/Header';
+import './App.css';
 
 function App() {
   return (

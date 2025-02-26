@@ -71,16 +71,6 @@
   display: block;
 }
 
-/* Estado de erro */
-.employee-table__error {
-  background-color: #fff;
-  border-radius: var(--border-radius-md);
-  color: #ff0000;
-  margin: var(--spacing-lg);
-  padding: var(--spacing-sm);
-  text-align: center;
-}
-
 /* Estado vazio */
 .employee-table__empty-row {
   background-color: var(--color-white);

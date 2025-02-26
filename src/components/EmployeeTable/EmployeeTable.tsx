@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { GoDotFill } from 'react-icons/go';
 import { Employee } from '../../types';
 import EmployeeRow from '../EmployeeRow/';
+import ErrorMessage from '../ErrorMessage';
 import Loading from '../Loading';
 import SearchInput from '../SearchInput';
 import { fetchEmployees } from '../../services/api';
@@ -59,11 +60,7 @@ function EmployeeTable() {
   }
 
   if (error) {
-    return (
-      <div className="employee-table__error">
-        Erro: {error}
-      </div>
-    );
+    return <ErrorMessage message={error} />;
   }
 
   return (

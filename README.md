@@ -57,6 +57,7 @@ src/
 ├── components/        # Componentes React reutilizáveis
 │   ├── EmployeeRow/   # Componente para cada linha da tabela
 │   ├── EmployeeTable/ # Tabela com funcionalidade de busca
+│   ├── ErrorMessage/  # Mensagem de erro
 │   ├── Header/        # Cabeçalho da aplicação
 │   ├── Loading/       # Componente de carregamento
 │   └── SearchInput/   # Campo de busca em tempo real

@@ -1,0 +1,8 @@
+.error-message__container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  color: #ff0000;
+  margin: var(--spacing-lg);
+  padding: var(--spacing-sm);
+  text-align: center;
+}

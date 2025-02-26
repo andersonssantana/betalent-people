@@ -50,17 +50,6 @@
   display: block;
 }
 
-/* Estado vazio */
-.employee-table__empty-row {
-  background-color: var(--color-white);
-}
-
-.employee-table__empty-cell {
-  color: var(--color-muted);
-  padding: var(--spacing-lg);
-  text-align: center;
-}
-
 /* Responsividade */
 @media (min-width: 769px) {
   .employee-table__container {

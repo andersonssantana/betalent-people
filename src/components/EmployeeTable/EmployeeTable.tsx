@@ -1,5 +1,6 @@
 import { GoDotFill } from 'react-icons/go';
 import EmployeeRow from '../EmployeeRow';
+import EmptyEmployeeRow from '../EmptyEmployeeRow';
 import { Employee } from '../../types';
 import './EmployeeTable.css';
 
@@ -26,16 +27,10 @@ function EmployeeTable({ employees }: EmployeeTableProps) {
           </tr>
         </thead>
         <tbody>
-          {employees.length > 0 ? (
-            employees.map((employee) => (
-              <EmployeeRow key={employee.id} employee={employee} />
-            ))
+          { employees.length > 0 ? (
+            employees.map((employee) => <EmployeeRow key={employee.id} employee={employee} />)
           ) : (
-            <tr className="employee-table__empty-row">
-              <td colSpan={5} className="employee-table__empty-cell">
-                Nenhum funcionário encontrado
-              </td>
-            </tr>
+            <EmptyEmployeeRow message="Nenhum funcionário encontrado" />
           )}
         </tbody>
       </table>

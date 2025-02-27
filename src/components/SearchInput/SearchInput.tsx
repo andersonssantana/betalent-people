@@ -7,7 +7,7 @@ interface SearchInputProps {
   placeholder?: string;
 }
 
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, placeholder }) => {
+function SearchInput({ value, onChange, placeholder }: SearchInputProps) {
   return (
     <div className="search-input__container">
       <input
@@ -21,6 +21,6 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, placeholder 
       <FaSearch className="search-input__icon" />
     </div>
   );
-};
+}
 
 export default SearchInput;

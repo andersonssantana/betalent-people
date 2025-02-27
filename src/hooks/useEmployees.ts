@@ -2,6 +2,18 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { fetchEmployees } from '../services/api';
 import { Employee } from '../types';
 
+/**
+ * Hook personalizado para gerenciar a lista de funcionários, incluindo busca, carregamento e tratamento de erros.
+ *
+ * Este hook utiliza os hooks do React como useState, useEffect, useMemo e useCallback para gerenciar a lista de funcionários, realizar buscas, indicar o estado de carregamento e lidar com erros de requisição.
+ *
+ * @returns {Object} Um objeto contendo:
+ * - employees {Employee[]}: Lista filtrada de funcionários. A filtragem é case-insensitive para nome e cargo e realiza uma busca por substring no número de telefone, com base no termo de busca.
+ * - searchTerm {string}: Termo de busca atual usado para filtrar a lista de funcionários.
+ * - isLoading {boolean}: Indica se a lista de funcionários está sendo carregada.
+ * - error {string | null}: Mensagem de erro, se houver, em caso de falha na busca.
+ * - handleSearchChange {(React.ChangeEvent<HTMLInputElement) => void}: Função para atualizar o termo de busca quando o usuário digita, recebendo um evento de mudança de input.
+ */
 export function useEmployees() {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');

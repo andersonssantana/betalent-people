@@ -106,7 +106,6 @@
 
   .employee-row:hover {
     background-color: var(--color-background);
-    cursor: pointer;
   }
 
   .employee-row--expanded {

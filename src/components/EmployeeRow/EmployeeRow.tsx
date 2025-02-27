@@ -1,29 +1,23 @@
-import { useState, useCallback } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { Employee } from '../../types';
 import { formatDate, formatPhone } from '../../utils/formatters';
+import { useExpandableRow } from '../../hooks/useExpandableRow';
 import './EmployeeRow.css';
 
 interface EmployeeRowProps {
   employee: Employee;
+  onRowClick?: (employee: Employee) => void;
 }
 
-function EmployeeRow({ employee }: EmployeeRowProps) {
-  const [isExpanded, setIsExpanded] = useState<boolean>(false);
-  const [isClosing, setIsClosing] = useState<boolean>(false);
+function EmployeeRow({ employee, onRowClick }: EmployeeRowProps) {
+  const { isExpanded, isClosing, toggleExpand } = useExpandableRow();
 
-  const toggleExpand = useCallback(() => {
-    if (isExpanded) {
-      setIsClosing(true);
-      // Espera a animação terminar antes de fechar de fato
-      setTimeout(() => {
-        setIsExpanded(false);
-        setIsClosing(false);
-      }, 300);
-    } else {
-      setIsExpanded(true);
+  const handleRowClick = () => {
+    toggleExpand();
+    if (onRowClick) {
+      onRowClick(employee);
     }
-  }, [isExpanded]);
+  };
 
   const formattedDate = formatDate(employee.admission_date);
   const formattedPhone = formatPhone(employee.phone);
@@ -32,7 +26,9 @@ function EmployeeRow({ employee }: EmployeeRowProps) {
     <>
       <tr 
         className={`employee-row ${isExpanded ? 'employee-row--expanded' : ''}`} 
-        onClick={toggleExpand}
+        onClick={handleRowClick}
+        role="row"
+        aria-expanded={isExpanded}
       >
         <td className="employee-row__cell">
           <img 
@@ -55,9 +51,13 @@ function EmployeeRow({ employee }: EmployeeRowProps) {
         <td className="employee-row__cell">{formattedPhone}</td>
       </tr>
       {isExpanded && (
-        <tr className="employee-row__details">
+        <tr className="employee-row__details" role="row">
           <td colSpan={2}>
-            <div className={`employee-row__expanded-content ${isClosing ? 'employee-row__expanded-content--closing' : ''}`}>
+            <div 
+              className={`employee-row__expanded-content ${isClosing ? 'employee-row__expanded-content--closing' : ''}`}
+              role="region"
+              aria-label={`Detalhes de ${employee.name}`}
+            >
               <div className="employee-row__detail-item">
                 <strong>Cargo:</strong> {employee.job}
               </div>

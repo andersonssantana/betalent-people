@@ -12,7 +12,7 @@
 /* Células básicas */
 .employee-row__cell {
   color: var(--color-text-secondary);
-  padding: 16px 24px;
+  padding: var(--spacing-sm) var(--spacing-md);
 }
 
 /* Oculta colunas 3 a 5 em telas menores */

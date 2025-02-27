@@ -14,7 +14,7 @@ import { Employee } from '../types';
  * - error {string | null}: Mensagem de erro, se houver, em caso de falha na busca.
  * - handleSearchChange {(React.ChangeEvent<HTMLInputElement) => void}: Função para atualizar o termo de busca quando o usuário digita, recebendo um evento de mudança de input.
  */
-export function useEmployees() {
+export function useEmployees(): object {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(true);

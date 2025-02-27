@@ -2,6 +2,14 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { fetchEmployees } from '../services/api';
 import { Employee } from '../types';
 
+interface UseEmployeesReturn {
+  employees: Employee[];
+  searchTerm: string;
+  isLoading: boolean;
+  error: string | null;
+  handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
 /**
  * Hook personalizado para gerenciar a lista de funcionários, incluindo busca, carregamento e tratamento de erros.
  *
@@ -14,7 +22,7 @@ import { Employee } from '../types';
  * - error {string | null}: Mensagem de erro, se houver, em caso de falha na busca.
  * - handleSearchChange {(React.ChangeEvent<HTMLInputElement) => void}: Função para atualizar o termo de busca quando o usuário digita, recebendo um evento de mudança de input.
  */
-export function useEmployees(): object {
+export function useEmployees(): UseEmployeesReturn {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(true);

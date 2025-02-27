@@ -5,7 +5,7 @@ type HeaderProps = {
   alt: string;
 };
 
-const Header = ({ logo, alt }: HeaderProps) => {
+function Header ({ logo, alt }: HeaderProps) {
   return (
     <header className="header">
       <img src={ logo } alt={ alt } className="header__logo" />

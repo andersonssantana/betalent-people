@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import logo from './assets/logo.svg';
 import EmployeePage from './pages/EmployeePage';
 import Header from './components/Header';
@@ -13,4 +12,4 @@ function App() {
   );
 }
 
-export default memo(App);
+export default App;

@@ -24,6 +24,7 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Des
 - **Detalhes Expansíveis**: Em dispositivos móveis, os detalhes dos funcionários podem ser expandidos/recolhidos com animações suaves
 - **Tratamento de Estados**: Feedback visual durante carregamento, erros, e resultados de busca vazios
 - **Formatação de Dados**: Formatação automática de telefones e datas para melhor legibilidade
+- **Acessibilidade**: Uso adequado de atributos ARIA e estrutura semântica para garantir acessibilidade
 
 ## 💻 Tecnologias e Ferramentas
 
@@ -40,6 +41,7 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Des
 - **useMemo e useCallback**: Otimização de funções e dados calculados para evitar re-renderizações desnecessárias
 - **Memoização de Componentes**: Uso de `memo` para evitar rerenderizações de componentes quando as props não mudam
 - **Animações CSS Eficientes**: Transições que utilizam propriedades otimizadas para performance
+- **Renderização Condicional Inteligente**: Componentes são renderizados apenas quando necessários
 
 ### Back-end (Mock)
 
@@ -54,20 +56,21 @@ A aplicação foi construída com foco em componentização, seguindo princípio
 
 ```bash
 src/
-├── components/            # Componentes React reutilizáveis
-│   ├── EmployeeRow/       # Componente para cada linha da tabela
-│   ├── EmployeeTable/     # Tabela de funcionários
-│   ├── EmptyEmployeeRow/  # Componente para linha vazia da tabela
-│   ├── ErrorMessage/      # Mensagem de erro
-│   ├── Header/            # Cabeçalho da aplicação
-│   ├── Loading/           # Componente de carregamento
-│   └── SearchInput/       # Campo de busca em tempo real
-├── hooks/                 # Hooks personalizados para reutilização
-├── pages/                 # Páginas da aplicação
-│   └── EmployeePage/      # Página principal com funcionalidade de busca
-├── services/              # Serviços para comunicação com a API
-├── utils/                 # Funções utilitárias 
-├── types.ts               # Definições de tipos TypeScript
+├── components/               # Componentes React reutilizáveis
+│   ├── EmployeeRow/          # Componente para cada linha da tabela
+│   ├── EmployeeTable/        # Tabela de funcionários
+│   ├── EmptyEmployeeRow/     # Componente para linha vazia da tabela
+│   ├── ErrorMessage/         # Mensagem de erro
+│   ├── ExpandedEmployeeRow/  # Detalhes expandidos de um funcionário
+│   ├── Header/               # Cabeçalho da aplicação
+│   ├── Loading/              # Componente de carregamento
+│   └── SearchInput/          # Campo de busca em tempo real
+├── hooks/                    # Hooks personalizados para reutilização
+├── pages/                    # Páginas da aplicação
+│   └── EmployeePage/         # Página principal com funcionalidade de busca
+├── services/                 # Serviços para comunicação com a API
+├── utils/                    # Funções utilitárias 
+├── types.ts                  # Definições de tipos TypeScript
 └── ...
 ```
 
@@ -85,6 +88,16 @@ src/
   /* ... outras variáveis ... */
 }
 ```
+
+### Padrão BEM (Block Element Modifier)
+
+Adotamos a metodologia BEM para garantir uma estrutura CSS consistente e de fácil manutenção:
+
+- **Blocos**: Componentes independentes (ex: `employee-row`, `search-input`)
+- **Elementos**: Partes de um bloco (ex: `employee-row__cell`, `search-input__icon`)
+- **Modificadores**: Variações de estado (ex: `employee-row--expanded`, `employee-row__chevron--rotated`)
+
+Esta abordagem garante nomes de classes CSS mais descritivos, evita conflitos de nome e facilita a manutenção do código.
 
 ## 📱 Responsividade em Detalhes
 

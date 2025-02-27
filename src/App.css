@@ -1,4 +1,5 @@
 :root {
+  /* Cores */
   --color-primary: #0500ff;
   --color-background: #f0f0f0;
   --color-white: #ffffff;
@@ -8,13 +9,21 @@
   --color-border: #dfdfdf;
   --color-muted: #9e9e9e;
   --loading-bg-color: rgba(255, 255, 255, 0.8);
+  
+  /* Tipografia */
   --font-family: 'Roboto', sans-serif;
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
+  
+  /* Espaçamento */
   --spacing-xs: 8px;
   --spacing-sm: 16px;
   --spacing-md: 24px;
   --spacing-lg: 32px;
+  
+  /* Bordas e Raios */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  
+  /* Efeitos */
   --shadow-default: 0px 2px 8px 0px #00000033;
   --transition-default: 0.3s ease;
 }

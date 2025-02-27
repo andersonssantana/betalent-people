@@ -12,11 +12,12 @@ function SearchInput({ value, onChange, placeholder }: SearchInputProps) {
     <div className="search-input__container">
       <input
         type="text"
+        name="search"
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        aria-label={placeholder}
         className="search-input__input"
-        aria-label="Pesquisar"
       />
       <FaSearch className="search-input__icon" />
     </div>

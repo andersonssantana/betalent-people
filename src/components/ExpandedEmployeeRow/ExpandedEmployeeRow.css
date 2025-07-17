@@ -5,7 +5,7 @@
 
 /* Conteúdo expandido */
 .employee-row__expanded-content {
-  animation: slideDown var(--transition-default);
+  animation: employee-row-slide-down var(--transition-default);
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text-secondary);
@@ -13,7 +13,7 @@
 }
 
 .employee-row__expanded-content--closing {
-  animation: slideUp var(--transition-default);
+  animation: employee-row-slide-up var(--transition-default);
 }
 
 /* Itens detalhados */
@@ -26,7 +26,7 @@
 }
 
 /* Animações */
-@keyframes slideDown {
+@keyframes employee-row-slide-down {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -37,7 +37,7 @@
   }
 }
 
-@keyframes slideUp {
+@keyframes employee-row-slide-up {
   from {
     opacity: 1;
     transform: translateY(0);

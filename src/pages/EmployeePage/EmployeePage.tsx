@@ -82,10 +82,8 @@ const fakeEmployees = [
 
 function EmployeePage() {
   const {
-    employees,
     searchTerm,
     isLoading,
-    error,
     handleSearchChange
   } = useEmployees();
 

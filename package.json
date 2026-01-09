@@ -9,26 +9,27 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "json-server --watch db.json",
-    "start": "serve -s dist -l tcp://0.0.0.0:${PORT:-3000}"
+    "postinstall": "npm run build",
+    "start": "serve -s dist -l $PORT"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "serve": "^14.2.5"
+    "serve": "^14.2.5",
+    "typescript": "~5.7.2",
+    "vite": "^6.1.0",
+    "@vitejs/plugin-react": "^4.3.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.19.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0"
+    "typescript-eslint": "^8.22.0"
   }
 }

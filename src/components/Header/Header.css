@@ -6,4 +6,5 @@
 
 .header__logo {
   margin: 0;
+  max-height: 17px;
 }
